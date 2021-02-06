@@ -73,10 +73,14 @@ def start(test_range):
     print(pc2)
     time=[]
     for i in range(len(pc1)):
-        temp=round(abs(pc1[i]-pc2[i]),6)*1000
+        temp=abs(pc1[i]-pc2[i])
         time.append(temp)
     print(time)
-    return time
+
+    time2=[]
+    for i in time:
+        time2.append(round(i,6)*1000)
+    return time2
 
 
 color=['','blue','red','orange','black','green']
